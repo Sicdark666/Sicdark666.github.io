@@ -3,55 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interfaz de Configuración</title>
+    <title>Interfaz Animada</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Configuración del Script</h1>
-    
-    <label for="aaaa">AAAA:</label>
-    <input type="text" id="aaaa"><br>
-    
-    <label for="bbbb">BBBB:</label>
-    <input type="text" id="bbbb"><br>
-    
-    <label for="cccc">CCCC:</label>
-    <input type="text" id="cccc"><br>
-    
-    <label for="dddd">DDDD:</label>
-    <input type="text" id="dddd"><br>
-    
-    <button onclick="actualizarScript()">Actualizar Script</button>
 
-    <script>
-        function actualizarScript() {
-            var aaaa = document.getElementById('aaaa').value;
-            var bbbb = document.getElementById('bbbb').value;
-            var cccc = document.getElementById('cccc').value;
-            var dddd = document.getElementById('dddd').value;
+    <div class="menu">
+        <a href="#opcion1">Opción #1</a>
+        <a href="#opcion2">Opción #2</a>
+        <a href="#opcion3">Opción #3</a>
+        <a href="#opcion4">Opción #4</a>
+        <a href="#opcion5">Opción #5</a>
+        <a href="#opcion6">Opción #6</a>
+        <a href="#opcion7">Opción #7</a>
+        <a href="#opcion8">Opción #8</a>
+        <a href="#opcion9">Opción #9</a>
+        <a href="#opcion10">Opción #10</a>
+    </div>
 
-            // Leer el contenido del script actual
-            fetch('script.txt')
-                .then(response => response.text())
-                .then(scriptContent => {
-                    // Reemplazar los valores AAAA, BBBB, CCCC, DDDD en el script
-                    scriptContent = scriptContent.replace(/AAAA/g, aaaa)
-                                                 .replace(/BBBB/g, bbbb)
-                                                 .replace(/CCCC/g, cccc)
-                                                 .replace(/DDDD/g, dddd);
-
-                    // Crear un enlace de descarga para el script actualizado
-                    var blob = new Blob([scriptContent], { type: 'text/plain' });
-                    var url = window.URL.createObjectURL(blob);
-                    var a = document.createElement('a');
-                    a.href = url;
-                    a.download = 'script_actualizado.txt';
-                    document.body.appendChild(a);
-                    a.click();
-                    document.body.removeChild(a);
-                    window.URL.revokeObjectURL(url);
-                })
-                .catch(error => console.error('Error al leer el script:', error));
-        }
-    </script>
 </body>
 </html>
