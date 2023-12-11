@@ -3,71 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interfaz Animada</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Filtrar Datos</title>
+    <script src="filtrarDatos.js" defer></script>
 </head>
 <body>
 
-    <div class="menu">
-        <a href="#opcion1">Opción #1</a>
-        <a href="#opcion2">Opción #2</a>
-        <a href="#opcion3">Opción #3</a>
-        <a href="#opcion4">Opción #4</a>
-        <a href="#opcion5">Opción #5</a>
-        <a href="#opcion6">Opción #6</a>
-        <a href="#opcion7">Opción #7</a>
-        <a href="#opcion8">Opción #8</a>
-        <a href="#opcion9">Opción #9</a>
-        <a href="#opcion10">Opción #10</a>
-    </div>
+    <label for="departamentoSelect">Selecciona Departamento:</label>
+    <select id="departamentoSelect"></select>
 
-    <!-- Contenido de las páginas -->
-    <div id="opcion1" class="pagina-contenido">
-        <h2>Contenido de la Opción #1</h2>
-        <p>Aquí puedes agregar el contenido específico de la Opción #1.</p>
-    </div>
+    <label for="odnSelect">Selecciona Nombre de ODN:</label>
+    <select id="odnSelect"></select>
 
-    <div id="opcion2" class="pagina-contenido">
-        <h2>Contenido de la Opción #2</h2>
-        <p>Aquí puedes agregar el contenido específico de la Opción #2.</p>
-    </div>
-
-     <div id="opcion3" class="pagina-contenido">
-        <h2>Contenido de la Opción #2</h2>
-        <p>Aquí puedes agregar el contenido específico de la Opción #2.</p>
-    </div>
-
-     <div id="opcion4" class="pagina-contenido">
-        <h2>Contenido de la Opción #2</h2>
-        <p>Aquí puedes agregar el contenido específico de la Opción #2.</p>
-    </div>
-
-     <div id="opcion5" class="pagina-contenido">
-        <h2>Contenido de la Opción #2</h2>
-        <p>Aquí puedes agregar el contenido específico de la Opción #2.</p>
-    </div>
-
-     <div id="opcion6" class="pagina-contenido">
-        <h2>Contenido de la Opción #2</h2>
-        <p>Aquí puedes agregar el contenido específico de la Opción #2.</p>
-    </div>
-
-     <div id="opcion7" class="pagina-contenido">
-        <h2>Contenido de la Opción #2</h2>
-        <p>Aquí puedes agregar el contenido específico de la Opción #2.</p>
-    </div>
-
-     <div id="opcion8" class="pagina-contenido">
-        <h2>Contenido de la Opción #2</h2>
-        <p>Aquí puedes agregar el contenido específico de la Opción #2.</p>
-    </div>
-
-     <div id="opcion9" class="pagina-contenido">
-        <h2>Contenido de la Opción #2</h2>
-        <p>Aquí puedes agregar el contenido específico de la Opción #2.</p>
-    </div>
-
-    <!-- Repite el mismo patrón para las otras opciones -->
+    <table id="tablaDatos">
+        <!-- Aquí se mostrarán los datos filtrados -->
+    </table>
 
 </body>
 </html>
